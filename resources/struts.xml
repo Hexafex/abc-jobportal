@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+	
+		<action name="index">
+			<result>/index.jsp</result>
+		</action>
+		
+		<action name="confirmUser" class="org.jobportal.action.UserAction" method="execute">
+			<result name="confirm">/confirm.jsp</result>
+			<result name="input">/registration.jsp</result>
+		</action>
+		
+		 <action name="addUser" class="org.jobportal.action.UserAction" method="addUser">
+			<result name="success">/thankyou.jsp</result>
+			<result name="input">/confirm.jsp</result>
+		</action> 
+		
+		<action name="profile" class="org.jobportal.action.UserAction" method="showUser">
+			<result name="profile">/profile.jsp</result>
+		</action>
+		
+		<action name="updateUser" class="org.jobportal.action.UserAction" method="updateUser">
+			<result name="editUser">/updateProfile.jsp</result>
+			<result name="updatedUser">/profile.jsp</result>
+			<result name="input">/confirm.jsp</result>
+		</action>
+		
+		<action name="forget" class="org.jobportal.action.UserAction" method="changePass">
+			<result name="input">/forgetpw.jsp</result>
+			<result name="changePass">/passwordResetTy.jsp</result>
+		</action>
+		
+		<action name="search" class="org.jobportal.action.UserAction" method="searchUser">
+		 	<result name="search">/search.jsp</result>
+		 </action>
+		 
+		<action name="login" class="org.jobportal.action.LoginAction" method="execute">
+			<result name="profile">/profile.jsp</result>
+			<result name="login">/login.jsp</result>
+		</action>
+	
+		<action name="logout" class="org.jobportal.action.LoginAction" method="logout">
+			<result name="logout">/login.jsp</result>
+		</action>
+		
+		<action name="addPost" class="org.jobportal.action.JobPostAction" method="addPost">
+			<result name="addPost">/listPost.jsp</result>
+			<result name="input">/addPost.jsp</result>
+		</action>
+		
+		<action name="listPosts" class="org.jobportal.action.JobPostAction" method="execute">
+			<result name="jobList">/listPost.jsp</result>
+		</action>
+		
+		<action name="showPost" class="org.jobportal.action.JobPostAction" method="showPost">
+			<result name="showPost">/showPage.jsp</result>
+		</action>
+		
+		<action name="deletePost" class="org.jobportal.action.JobPostAction" method="deletePost">
+			<result name="deletePost">/listPost.jsp</result>
+		</action>
+		
+		<action name="updatePost" class="org.jobportal.action.JobPostAction" method="updatePost">
+			<result name="editPost">/updatePost.jsp</result>
+			<result name="updatePost">/listPost.jsp</result>
+		</action>
+		
+		<action name="listExp" class="org.jobportal.action.ExperienceAction" method="listExp">
+			<result name="listExp">/listExp.jsp</result>		
+		</action>
+		
+		<action name="addExp" class="org.jobportal.action.ExperienceAction" method="addExp">
+			<result name="addExp">/listExp.jsp</result>
+		</action>
+		
+		<action name="deleteExp" class="org.jobportal.action.ExperienceAction" method="deleteExp">
+			<result name="deleteExp">/listExp.jsp</result>
+		</action>
+		
+		<action name="updateExp" class="org.jobportal.action.ExperienceAction" method="updateExp">
+			<result name="editExp">/updateExp.jsp</result>
+			<result name="updateExp">/listExp.jsp</result>
+		</action>
+		
+		<action name="listQual" class="org.jobportal.action.QualificationAction" method="listQual">
+			<result name="listQual">/listQual.jsp</result>
+		</action>
+		
+		<action name="addQual" class="org.jobportal.action.QualificationAction" method="addQual">
+			<result name="addQual">/listQual.jsp</result>
+		</action>
+		
+		<action name="updateQual" class="org.jobportal.action.QualificationAction" method="updateQual">
+			<result name="updateQual">/listQual.jsp</result>
+			<result name="editQual">/updateQual.jsp</result>
+		</action>
+		
+		<action name="deleteQual" class="org.jobportal.action.QualificationAction" method="deleteQual">
+			<result name="deleteQual">/listQual.jsp</result>
+		</action>
+		
+		 <action name="addComment" class="org.jobportal.action.CommentAction" method="addComment">
+			<result name="addComment">/showPage.jsp</result>
+		</action>
+		 
+		 
+	</package>
+</struts>

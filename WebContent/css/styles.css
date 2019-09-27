@@ -1,0 +1,51 @@
+
+body{
+  background-image:url("../assets/background.png");
+}
+
+label{
+	color:white;
+	font-size:24px;
+}
+input{
+	font-size:24px;
+}
+i{
+  font-size: 20px;
+  float: right;
+}
+
+li{
+  list-style-type: none ;
+  display: inline-block;
+}
+
+.overlay{
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  padding:10px;
+}
+
+form{
+  color: black;
+  text-align:center;
+}
+
+.text-color{
+	color:white;
+}
+table{
+
+	padding: 5px;
+	color:white;
+	text-align:left;
+	
+}
+.register{
+	margin-top:5%;
+	
+}
+.wwFormTable{
+	text-align:left;
+	display:inline-block;
+}
